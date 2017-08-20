@@ -1,0 +1,13 @@
+[Unit]
+Description=Storm - {{ item }}
+After=network.target zookeeper.service
+
+[Service]
+ExecStart=/usr/local/etc/storm/bin/storm {{ item }}
+User=storm
+Group=storm
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

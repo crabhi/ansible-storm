@@ -13,3 +13,18 @@
 
 - name: Apache Storm | Make sure the local working directory for storm is present
   file: path={{ storm_local_dir }} owner={{ storm_user }} group={{ storm_group }} mode=0750 state=directory
+
+- name: Upload Systemd services
+  template:
+    src: storm.service
+    dest: /etc/systemd/system/storm-{{ item }}.service
+  with_items:
+    - nimbus
+    - ui
+    - supervisor
+
+- name: Enable services
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    state: started
