@@ -3,7 +3,7 @@ storm
 
 The role do following:
 
-1. Setup java 6 (open jdk)
+1. Setup java 8 (open jdk)
 2. Setup user and group for Apache Storm
 3. Install Apache Storm
 4. Configure Apache Storm
@@ -52,9 +52,6 @@ Defaults are:
 
 Dependencies
 ------------
-
-Depends on [smola.java](https://galaxy.ansible.com/list#/roles/1209).
-requirements.txt file for ansible-galaxy can be found in tests dir.
 
 Example Playbook
 ----------------

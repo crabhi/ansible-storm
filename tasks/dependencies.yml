@@ -1,0 +1,4 @@
+- name: Ensure APT packages
+  apt: package={{ item }}
+  with_items:
+    - openjdk-8-jre-headless

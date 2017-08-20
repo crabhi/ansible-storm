@@ -11,5 +11,3 @@ galaxy_info:
   categories:
   - cloud
   - clustering
-dependencies: 
-  - { role: smola.java, java_packages: ["openjdk-6-jdk"] }
